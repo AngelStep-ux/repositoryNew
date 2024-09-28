@@ -104,7 +104,7 @@ def average_lecturer_grade(lecturers, course):
     return sum(total_grades) / len(total_grades) if total_grades else 0
 
 
-# Создаем студентов
+
 student1 = Student('Ruoy', 'Eman', 'your_gender')
 student1.courses_in_progress += ['Python', 'Git']
 student1.finished_courses += ['Введение в программирование']
@@ -113,21 +113,21 @@ student2 = Student('John', 'Doe', 'male')
 student2.courses_in_progress += ['Python', 'Data Science']
 student2.finished_courses += ['Алгебра']
 
-# Создаем лекторов
+
 lecturer1 = Lecturer('Julia', 'Roberts')
 lecturer1.courses_attached += ['Python']
 
 lecturer2 = Lecturer('Steve', 'Jobs')
 lecturer2.courses_attached += ['Python']
 
-# Создаем экспертов
+
 reviewer1 = Reviewer('Mark', 'Smith')
 reviewer1.courses_attached += ['Python']
 
 reviewer2 = Reviewer('Anna', 'Taylor')
 reviewer2.courses_attached += ['Python']
 
-# Ставим оценки
+
 reviewer1.review_hw(student1, 'Python', 8)
 reviewer1.review_hw(student1, 'Python', 9)
 reviewer1.review_hw(student2, 'Python', 10)
@@ -137,14 +137,14 @@ lecturer2.rate_hw(student1, 'Python', 7)
 lecturer1.rate_hw(student2, 'Python', 8)
 lecturer2.rate_hw(student2, 'Python', 9)
 
-# Выводим информацию о студентах и лекторах
+
 print(student1)
 print(student2)
 print(lecturer1)
 print(lecturer2)
 
-# Подсчет средней оценки за домашние задания по всем студентам в рамках конкретного курса
+
 print(f'\nСредняя оценка за домашние задания по курсу Python: {average_student_grade([student1, student2], "Python"):.1f}')
 
-# Подсчет средней оценки за лекции всех лекторов в рамках курса
+
 print(f'Средняя оценка за лекции по курсу Python: {average_lecturer_grade([lecturer1, lecturer2], "Python"):.1f}')
